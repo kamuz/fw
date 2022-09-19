@@ -3,6 +3,7 @@
 namespace ishop;
 
 class ErrorHandler{
+	// Show or hide errors
 	public function __construct(){
 		if(DEBUG){
 			error_reporting(-1);
