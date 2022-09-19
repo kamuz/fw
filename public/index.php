@@ -1,3 +1,3 @@
 <?php
 
-echo 'This is front-controller';
+var_dump($_SERVER['QUERY_STRING']);
