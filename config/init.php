@@ -1,6 +1,6 @@
 <?php
 
-define('DEBUG', 1);
+define('DEBUG', false);
 define('ROOT', dirname(__DIR__) );
 define('PATH', "http://{$_SERVER['SERVER_NAME']}");
 define('WWW', ROOT . '/public' );

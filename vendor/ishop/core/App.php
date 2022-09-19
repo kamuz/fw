@@ -13,6 +13,8 @@ class App{
 		self::$app = Registry::instance();
 		// Get params init
 		$this->getParams();
+		// Error handler init
+		new ErrorHandler();
 	}
 
 	// Loop params from file and set as object properties
