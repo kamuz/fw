@@ -15,6 +15,8 @@ class App{
 		$this->getParams();
 		// Error handler init
 		new ErrorHandler();
+		// Check route
+		Router::dispatch( $query );
 	}
 
 	// Loop params from file and set as object properties

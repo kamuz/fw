@@ -2,8 +2,8 @@
 
 require_once dirname(__DIR__) . '/config/init.php';
 require_once LIBS . '/functions.php';
+require_once CONF . '/routes.php';
 
 new \ishop\App();
 
-throw new Exception('Page not found', 404);
-// throw new Exception('Server error', 500);
+debug(ishop\Router::getRoutes());
