@@ -72,7 +72,6 @@ class Router {
 				$route['controller'] = self::upperCamelCase( $route['controller'] );
 				// Set current route
 				self::$route = $route;
-				debug( self::$route );
 				return true;
 			}
 		}
