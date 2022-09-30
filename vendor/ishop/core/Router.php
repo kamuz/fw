@@ -37,6 +37,7 @@ class Router {
 				if ( method_exists( $controllerObject, $action ) ) {
 					// Call action
 					$controllerObject->$action();
+					$controllerObject->getView();
 				} else {
 					throw new \Exception( "Method $controller::$action not found" );
 				}
