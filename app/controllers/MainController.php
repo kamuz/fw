@@ -2,12 +2,15 @@
 
 namespace app\controllers;
 
+use ishop\App;
+
 class MainController extends AppController {
+
 	public function indexAction(){
-		debug( $this->route );
+		$this->setMeta( App::$app->getProperty('shop_name') . ' - Home page', 'This is test description' );
 	}
 
 	public function viewAction(){
-		echo __METHOD__;
+
 	}
 }
