@@ -23,7 +23,7 @@ abstract class Controller {
 	}
 
 	// Save data for sending from controller to view
-	public function set( $date ) {
+	public function set( $data ) {
 		$this->data = $data;
 	}
 

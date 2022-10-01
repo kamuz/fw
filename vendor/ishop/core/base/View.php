@@ -33,6 +33,10 @@ class View {
 
 	// Render layout and views
 	public function render( $data ){
+		debug( $data );
+		if ( is_array( $data ) ) {
+			extract( $data );
+		}
 		// Path to current view
 		$viewFile = APP . strtolower( "/views/{$this->prefix}{$this->controller}/{$this->view}.php" );
 		if ( is_file( $viewFile ) ) {

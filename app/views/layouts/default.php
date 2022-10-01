@@ -6,8 +6,6 @@
 	<?php echo $this->getMeta(); ?>
 </head>
 <body>
-	<h1>Default layout</h1>
 	<?php echo $content; ?>
-	<?php debug($this) ?>
 </body>
 </html>
