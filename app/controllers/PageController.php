@@ -5,7 +5,10 @@ namespace app\controllers;
 class PageController extends AppController{
 
 	public function indexAction(){
-		echo __METHOD__;
+		$this->setMeta( 'All pages', 'Another description' );
+		$messages = \R::findAll( 'messages' );
+		// debug( $messages );
+		$this->set( [ 'messages' => $messages ] );
 	}
 
 	public function viewAction(){
