@@ -34,7 +34,6 @@ class View {
 
 	// Render layout and views
 	public function render( $data ){
-		debug( $data );
 		if ( is_array( $data ) ) {
 			extract( $data );
 		}
