@@ -27,7 +27,6 @@ class Router {
 	// Work with URL
 	public static function dispatch( $url ) {
 		$url = self::removeQueryString( $url );
-		debug( $url );
 		if ( self::matchRoute( $url ) ) {
 			// Set path to controller
 			$controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
