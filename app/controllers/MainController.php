@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use ishop\App;
+use ishop\Cache;
 
 class MainController extends AppController {
 
@@ -12,6 +13,7 @@ class MainController extends AppController {
 		$todo = ['Call with client', 'Go to the shop', 'Play with children'];
 		$position = 'WordPress Developer';
 		$this->set( ['name' => 'Vladimir', 'country' => 'Ukraine', 'todo' => $todo, 'work' => compact( 'company', 'position' )] );
+		$cache = Cache::
 	}
 
 	public function viewAction(){
