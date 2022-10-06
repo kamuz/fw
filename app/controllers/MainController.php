@@ -13,7 +13,14 @@ class MainController extends AppController {
 		$todo = ['Call with client', 'Go to the shop', 'Play with children'];
 		$position = 'WordPress Developer';
 		$this->set( ['name' => 'Vladimir', 'country' => 'Ukraine', 'todo' => $todo, 'work' => compact( 'company', 'position' )] );
-		$cache = Cache::
+		$cache = Cache::instance();
+		$cache->delete( 'test' );
+		$cache->set( 'test', $todo );
+		$data = $cache->get( 'test' );
+		debug( $data );
+		if ( !$data ) {
+			$cache->set( 'test', $todo );
+		}
 	}
 
 	public function viewAction(){

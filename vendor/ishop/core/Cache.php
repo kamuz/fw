@@ -13,7 +13,7 @@ class Cache {
 			// Set end time
 			$content['end_time'] = time() + $seconds;
 			// Save content to the file
-			if ( file_contents( CACHE . '/' . md5( $key ) . '.txt', serialize( $content ) ) ) {
+			if ( file_put_contents( CACHE . '/' . md5( $key ) . '.txt', serialize( $content ) ) ) {
 				return true;
 			}
 		}
@@ -38,7 +38,7 @@ class Cache {
 	}
 
 	// Delete cache
-	public function delete() {
+	public function delete( $key ) {
 		// Get file by key
 		$file = CACHE . '/' . md5( $key ) . '.txt';
 		if ( file_exists( $file ) ) {
