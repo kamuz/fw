@@ -2,11 +2,7 @@
 
 namespace app\controllers;
 
-class PageController{
-
-	public function __construct( $route ) {
-		debug( $route );
-	}
+class PageController extends AppController{
 
 	public function indexAction(){
 		echo __METHOD__;

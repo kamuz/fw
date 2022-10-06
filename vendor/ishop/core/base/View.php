@@ -15,6 +15,7 @@ class View {
 
 	// Define app variables
 	public function __construct( $route, $layout = '', $view = '', $meta ) {
+		// debug($route);
 		$this->route = $route;
 		$this->controller = $route['controller'];
 		$this->model = $route['controller'];

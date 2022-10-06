@@ -26,6 +26,8 @@ class Router {
 
 	// Work with URL
 	public static function dispatch( $url ) {
+		$url = self::removeQueryString( $url );
+		debug( $url );
 		if ( self::matchRoute( $url ) ) {
 			// Set path to controller
 			$controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
@@ -89,5 +91,17 @@ class Router {
 	// For actions, example - camelCase
 	protected static function lowerCamelCase( $name ) {
 		return lcfirst( self::upperCamelCase( $name ) );
+	}
+
+	// Remove query string from URL
+	protected static function removeQueryString( $url ) {
+		if ( $url ) {
+			$params = explode( '&', $url, 2 );
+			if ( ! strpos( $params[0] , '=') ) {
+				return rtrim( $params[0], '/' );
+			} else {
+				return '';
+			}
+		}
 	}
 }
